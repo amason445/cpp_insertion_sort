@@ -25,13 +25,17 @@ std::vector<int> insertionSort(std::vector<int> vec) {
 void print_output(std::vector<int> vec) {
 
  std::cout << "Input is: \n"; 
+ 
  for (int i: vec) {
   std::cout << i << ' ';
  }
+ 
  std::cout << "\nand the output is: \n";
+ 
  for (int i: insertionSort(vec)) {
   std::cout << i << ' '; 
  }
+ 
  std::cout << std::endl;
 }
 

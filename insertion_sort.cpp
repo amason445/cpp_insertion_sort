@@ -1,10 +1,7 @@
 #include <vector>
 #include <iostream>
 
-
-using namespace std;
-
-vector<int> insertionSort(vector<int> vec) {
+std::vector<int> insertionSort(std::vector<int> vec) {
 
   for(int i = 2; i < vec.size(); i++) {
 
@@ -25,13 +22,17 @@ vector<int> insertionSort(vector<int> vec) {
 }
 
 
-void print_output(vector<int> vec) {
+void print_output(std::vector<int> vec) {
 
-	cout << "Input is: \n"; 
-	for (int i: vec) cout << i << ' ';
-	cout << "\n and output is \n";
-	for (int i: insertionSort(vec)) cout << i << ' '; 
-
+ std::cout << "Input is: \n"; 
+ for (int i: vec) {
+  std::cout << i << ' ';
+ }
+ std::cout << "\nand the output is: \n";
+ for (int i: insertionSort(vec)) {
+  std::cout << i << ' '; 
+ }
+ std::cout << std::endl;
 }
 
 
@@ -39,7 +40,7 @@ void print_output(vector<int> vec) {
 
 int main() {
 
-  vector<int> vec {4,3,2,1};
+  std::vector<int> vec {4,3,2,1};
 
   print_output(vec);
 
